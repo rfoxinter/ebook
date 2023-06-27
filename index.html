@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Bib/i | Bibliothèque</title>
+        <link rel="icon" type="image/png" href="icon.ico"/>
+        <link rel="stylesheet" type="text/css" href="./index.css">
+        <script type="text/javascript">
+            function openBook() {
+            	repuser=document.bookshelf.book.value;
+            	window.open("./bibi/?book="+repuser);
+            }
+        </script>
+        <script type="text/javascript">
+            function aBibi() {
+                var p = document.getElementById("openBibi");
+                p.onclick = openNow;
+            }
+            function openNow(){
+                window.open("./bibi/", "_blank");
+            }
+        </script>
+    </head>
+    <body onload="aBibi();">
+        <div class="bloc1" id="top">
+            <h1>Ouvrir un livre</h1>
+            <form name="bookshelf" id="bookshelf" action="./merci/">
+                <input type="text" name="book" id="book" placeholder="Entez le lien du livre" type="url">
+                <button onclick="openBook()">Ouvrir le livre</button>
+            </form>
+            <p><a id="openBibi" href="https://drive.google.com/drive/folders/132B0PBKh3bqA5dlQ5uCCgLFlkG86vZGu?usp=sharing">Télécharger un .epub</a></p>
+            <p><a href="./aide/" target="_blank">Comment ouvrir un .epub ?</a></p>
+        </div>
+        <div>
+            <h1>Bibliothèque</h1>
+            <p><a href="./bibliotheque/" target="_blank">Comment ouvrir un livre de la bibliothèque ?</a></p>
+            <div style="position:relative;width:100%;background:#F4F4F4"><iframe src="https://padlet.com/embed/6umdb5iqmfxs" style="width:100%;height:700px;display:block;"></iframe></p></div>
+        </div>
+    </body>
+</html>
